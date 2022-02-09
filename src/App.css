@@ -1,0 +1,425 @@
+.App {
+  height: 100vh;
+  background-color: #b90808;
+  display: flex;
+  color: rgb(240, 214, 214);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  font-size: 14px;
+
+  animation: title-show 3s;
+}
+
+@keyframes title-show {
+  0%{
+    color: #b90808;
+  }
+
+  100%{
+
+  }
+}
+
+.title-text {
+  margin-right: 10px;
+}
+
+.circle {
+  width: 400px;
+  height: 400px;
+  border: 11px dashed rgb(240, 214, 214);
+  border-radius: 50%;
+
+  animation: circle-show 3s;
+}
+
+@keyframes circle-show {
+  0% {
+    border: 11px dashed #b90808;
+  }
+  100% {
+    border: 11px dashed rgb(240, 214, 214);
+  }
+}
+
+.circle::before {
+  content: " ";
+  position: absolute;
+  width: 12px;
+  height: 14px;
+  top: -13px;
+  left: 48%;
+  background-color: #b90808;
+}
+
+.circle-round {
+
+  animation-name: circle-round;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.circle-round-pause {
+  animation-name: circle-round;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+@keyframes circle-round {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.time {
+  animation-name: time-round;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.time-text {
+  font-size: 20px;
+
+  animation: time-show 3s;
+}
+
+@keyframes time-show {
+  0%{
+    font-size: 1px;
+    transform: rotate(0);
+  }
+  70% {
+    font-size: 20px;
+    transform: rotate(735deg);
+  }
+  100%{
+    transform: rotate(720deg);
+  }
+}
+
+.time-pause {
+  animation-name: time-round;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+
+@keyframes time-round {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.button {
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid rgb(240, 214, 214);
+  border-radius: 3px;
+  color: rgb(240, 214, 214);
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.button-start {
+  padding: 30px;
+}
+
+.button-disabled-left {
+  border: 1px solid #b90808;
+  color: #b90808;
+  cursor: default;
+
+  animation-name: button-disabled-left;
+  animation-duration: 3s;
+}
+
+@keyframes button-disabled-left {
+  0% {
+    border: 1px solid rgb(240, 214, 214);
+    color: rgb(240, 214, 214);
+  }
+  50% {
+    border: 1px solid #b90808;
+    color: #b90808;
+    margin-right: 200px;
+    cursor: default;
+  }
+}
+
+.button-active-left {
+  border: 1px solid rgb(240, 214, 214);
+  color: rgb(240, 214, 214);
+
+  animation-name: button-active-left;
+  animation-duration: 3s;
+}
+
+@keyframes button-active-left {
+  0% {
+    border: 1px solid #b90808;
+    color: #b90808;
+    margin-right: 200px;
+    cursor: default;
+  }
+  100% {
+    border: 1px solid rgb(240, 214, 214);
+    color: rgb(240, 214, 214);
+    margin-right: 20px;
+  }
+}
+
+.button-active-right {
+  border: 1px solid rgb(240, 214, 214);
+  color: rgb(240, 214, 214);
+
+  animation-name: button-active-right;
+  animation-duration: 3s;
+}
+
+@keyframes button-active-right {
+  0% {
+    border: 1px solid #b90808;
+    color: #b90808;
+    margin-left: 200px;
+    cursor: default;
+  }
+  100% {
+    border: 1px solid rgb(240, 214, 214);
+    color: rgb(240, 214, 214);
+    margin-left: 0;
+  }
+}
+
+.button-disabled-right {
+  border: 1px solid #b90808;
+  color: #b90808;
+  cursor: default;
+
+  animation-name: button-disabled-right;
+  animation-duration: 3s;
+}
+
+@keyframes button-disabled-right {
+  0% {
+    border: 1px solid rgb(240, 214, 214);
+    color: rgb(240, 214, 214);
+  }
+  50% {
+    border: 1px solid #b90808;
+    color: #b90808;
+    margin-left: 200px;
+    cursor: default;
+  }
+}
+
+.button-start-active {
+  margin-top: 0;
+  padding: 40px;
+  font-size: 30px;
+
+  animation-name: button-start-active;
+  animation-duration: 3s;
+}
+
+@keyframes button-start-active {
+  0%{
+    margin-top: 30px;
+    padding: 30px;
+    font-size: 22px;
+  }
+  100%{
+    margin-top: 0;
+    padding: 40px;
+    font-size: 30px;
+  }
+}
+
+.button-start-disabled {
+  margin-top: 30px;
+  padding: 30px;
+  font-size: 22px;
+
+  animation-name: button-start-disabled;
+  animation-duration: 3s;
+}
+
+@keyframes button-start-disabled {
+  0%{
+    margin-top: 0;
+    padding: 40px;
+    font-size: 30px;
+  }
+  100%{
+    margin-top: 30px;
+    padding: 30px;
+    font-size: 22px;
+  }
+}
+
+.two-circle {
+  background-color: red;
+}
+
+.box-button {
+  display: flex;
+}
+
+.box-button-disabled {
+  display: none;
+}
+
+.box-timer {
+  display: flex;
+  align-items: center;
+
+  animation-name: box-show;
+  
+}
+
+@keyframes box-show {
+  0%{
+
+  }
+  100%{
+
+  }
+}
+
+.dart {
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+
+  animation: dart-show 6s;
+}
+
+@keyframes dart-show {
+  0%{
+    color: #b90808;
+    margin-top: 50px;
+  }
+  40%{
+    color: #b90808;
+  }
+  100%{
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 568px) {
+  .circle {
+    width: 60vw;
+    height: 60vw;
+    border: 8px dashed rgb(240, 214, 214);
+  }
+
+  .button-disabled-left {
+    border: 1px solid #b90808;
+    color: #b90808;
+    cursor: default;
+  
+    animation-name: button-disabled-left;
+    animation-duration: 3s;
+  }
+  
+  @keyframes button-disabled-left {
+    0% {
+      border: 1px solid rgb(240, 214, 214);
+      color: rgb(240, 214, 214);
+    }
+    50% {
+      border: 1px solid #b90808;
+      color: #b90808;
+      cursor: default;
+    }
+  }
+  
+  .button-active-left {
+    border: 1px solid rgb(240, 214, 214);
+    color: rgb(240, 214, 214);
+  
+    animation-name: button-active-left;
+    animation-duration: 3s;
+  }
+  
+  @keyframes button-active-left {
+    0% {
+      border: 1px solid #b90808;
+      color: #b90808;
+      cursor: default;
+    }
+    100% {
+      border: 1px solid rgb(240, 214, 214);
+      color: rgb(240, 214, 214);
+    }
+  }
+  
+  .button-active-right {
+    border: 1px solid rgb(240, 214, 214);
+    color: rgb(240, 214, 214);
+  
+    animation-name: button-active-right;
+    animation-duration: 3s;
+  }
+  
+  @keyframes button-active-right {
+    0% {
+      border: 1px solid #b90808;
+      color: #b90808;
+      cursor: default;
+    }
+    100% {
+      border: 1px solid rgb(240, 214, 214);
+      color: rgb(240, 214, 214);
+    }
+  }
+  
+  .button-disabled-right {
+    border: 1px solid #b90808;
+    color: #b90808;
+    cursor: default;
+  
+    animation-name: button-disabled-right;
+    animation-duration: 3s;
+  }
+  
+  @keyframes button-disabled-right {
+    0% {
+      border: 1px solid rgb(240, 214, 214);
+      color: rgb(240, 214, 214);
+    }
+    50% {
+      border: 1px solid #b90808;
+      color: #b90808;
+      cursor: default;
+    }
+  }
+
+  .dart {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+}
