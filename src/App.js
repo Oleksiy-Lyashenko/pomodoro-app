@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import classNames from 'classnames';
 import useSound from 'use-sound';
 
-import tick_tock from './sounds/22627__tim-kahn__timer.flac';
+import tick_tock from './sounds/tik.mp3';
 import end_sound from './sounds/Cline_Dion_-_My_Heart_Will_Go_On.mp3';
 import './App.css';
 import Circle from './components/Circle';
